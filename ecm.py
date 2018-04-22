@@ -153,7 +153,7 @@ for t in range(niter):
     sigma_4 = np.sqrt((1/len(users)) * s)
 
 
-m = np.array([bow_obs.dot(w_3), tfidf_obs.dot(w_3), user_to_w2v_obs.dot(w_3),user_to_liwc_obs.dot(w_4)])
-yhat_mean = np.mean(m, 0)
 
-print(pearsonr(yobs, yhat_mean))
+m = np.array([w2v_test.dot(w_3),liwc_test.dot(w_4)])
+yhat_mean = np.mean(m, 0)
+print(pearsonr(ytest, yhat_mean))
