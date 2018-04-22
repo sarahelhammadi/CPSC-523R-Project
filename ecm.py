@@ -127,7 +127,7 @@ for t in range(niter):
     for i in range(len(users)):
         s = s + y2[i] - 2*y[i]*np.transpose(w_3).dot(X[i]) + (np.transpose(w_3).dot(X[i]))**2
 
-    sigma_3 = np.sqrt((1/len(users)) * s)
+    sigma_2 = np.sqrt((1/len(users)) * s)
 
 
     X = np.concatenate([user_to_w2v_obs, user_to_w2v_tilde])
